@@ -139,7 +139,14 @@ function activateLightMode(){
 </ul>
 <p>这种声明试注册方式有一个最大的缺点，就是需要将实现类对外暴露，之前一致强调要将接口和具体实现进行剥离，所以应该避免直接涉及具体的实现类</p>
 <h2 id="Annotation-方式注入"><a href="#Annotation-方式注入" class="headerlink" title="Annotation 方式注入"></a>Annotation 方式注入</h2><p>关于注解方式注入实现，在Android中需要依赖Gradle插件，在编译阶段搜集所有的注解，将其相关类，变量等搜集到元数据中去。</p>
-<p>这里我找了阿里的ARouter框架相关文章，具体说明是如何通过注解来实现依赖注入的。<br><a href="https://www.jianshu.com/p/6021f3f61fa6" target="_blank" rel="noopener">ARouter使用介绍</a><br><a href="https://juejin.cn/post/6885932290615509000#heading-89" target="_blank" rel="noopener">探索Arouter原理</a><br><a href="https://github.com/pplovelyliu/anotation.git" target="_blank" rel="noopener">注解编译加载demo</a></p>
+<p>这里我找了阿里的ARouter框架相关文章，具体说明是如何通过注解来实现依赖注入的。</p>
+<p><a href="https://www.jianshu.com/p/6021f3f61fa6" target="_blank" rel="noopener">ARouter使用介绍</a></p>
+<p><a href="https://juejin.cn/post/6885932290615509000#heading-89" target="_blank" rel="noopener">探索Arouter原理</a></p>
+<p><a href="https://github.com/pplovelyliu/anotation.git" target="_blank" rel="noopener">注解编译加载demo</a></p>
+<p><a href="https://blog.csdn.net/HaHa_Sir/article/details/80753682" target="_blank" rel="noopener">java注解介绍</a></p>
+<p><a href="https://juejin.cn/post/6844903460895195150" target="_blank" rel="noopener">注解解析</a></p>
+<p><a href="https://github.com/square/javapoet" target="_blank" rel="noopener">javapoet github</a></p>
+<p><a href="https://27house.cn/archives/1429" target="_blank" rel="noopener">javapoet的基础使用</a></p>
 <h1 id="控制反转和依赖注入"><a href="#控制反转和依赖注入" class="headerlink" title="控制反转和依赖注入"></a>控制反转和依赖注入</h1><p>模块化首要需要做的的就是数据隔离。即每个模块需要有自己的输入输出，若出现多个模块共同依赖某个数据对象，那这就是伪模块化，一旦该数据对象发生变化，所有模块都会受到影响，这是我们最不希望见到的。</p>
 <p><a href="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%80%A6%E5%90%88.png" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%80%A6%E5%90%88.png" class="lazyload"></a></p>
 <p>如果模块之间有通信交互，那么上层业务不能依赖低层细节模块。<br>这里就涉及到控制反转和依赖注入，下面这篇文章图文并茂，说明的很清晰：<br><a href="https://www.jianshu.com/p/07af9dbbbc4b" target="_blank" rel="noopener">控制反转（IoC）与依赖注入（DI）</a></p>
